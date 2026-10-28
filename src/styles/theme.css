@@ -1,0 +1,62 @@
+/* ============================================================
+   src/styles/theme.css — CLIENT RETHEMING LAYER
+   ------------------------------------------------------------
+   Every OpenTickets colour reference resolves through the tokens
+   declared in index.css (@theme). To re-skin the platform for a
+   client, override the accent ramp on a `data-theme` root — no
+   component changes, no rebuild of markup.
+
+   Active theme is set on <html data-theme="…"> by ThemeSwitcher.tsx
+   and persisted in localStorage under `opentickets.theme`.
+   ============================================================ */
+
+/* --- Ember: warm coral + burnt amber (festival / youth brands) --- */
+:root[data-theme="ember"] {
+  --color-gold-200: #ffdcc9;
+  --color-gold-300: #ffb99b;
+  --color-gold-400: #ff8a63;
+  --color-gold-500: #f4593a;
+  --color-gold-600: #b93a1f;
+  --color-coral-200: #ffe6c9;
+  --color-coral-300: #ffd08a;
+  --color-coral-400: #f5b544;
+  --color-coral-500: #dd9318;
+}
+
+/* --- Iris: electric violet + glacier blue (corporate / arena brands) --- */
+:root[data-theme="iris"] {
+  --color-gold-200: #e2dcff;
+  --color-gold-300: #c3b6ff;
+  --color-gold-400: #9d8cff;
+  --color-gold-500: #7b65f5;
+  --color-gold-600: #5743c4;
+  --color-coral-200: #cdf3ff;
+  --color-coral-300: #9fe4ff;
+  --color-coral-400: #57cdf7;
+  --color-coral-500: #23a8dd;
+}
+
+/* --- Karoo: sage + clay (heritage, arts and food festivals) --- */
+:root[data-theme="karoo"] {
+  --color-gold-200: #e6f2dc;
+  --color-gold-300: #c6e0b0;
+  --color-gold-400: #9dc97f;
+  --color-gold-500: #74a856;
+  --color-gold-600: #4f7c39;
+  --color-coral-200: #f6dccc;
+  --color-coral-300: #e8b795;
+  --color-coral-400: #cf8f62;
+  --color-coral-500: #a86a3f;
+  --color-ink-950: #070a07;
+  --color-ink-900: #0c110c;
+  --color-ink-850: #101610;
+  --color-ink-800: #141b14;
+}
+
+/* Theme transitions — keep the switch perceptible but calm */
+:root[data-theme] body,
+:root[data-theme] .btn-gold,
+:root[data-theme] .chip[data-active="true"] {
+  transition: background-color 0.45s ease, color 0.45s ease, border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}

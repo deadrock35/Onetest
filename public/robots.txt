@@ -1,0 +1,9 @@
+# OpenTickets — opentickets.co.za
+User-agent: *
+Allow: /
+
+# Ticketing and account flows carry no indexable content
+Disallow: /checkout
+Disallow: /account
+
+Sitemap: https://opentickets.co.za/sitemap.xml
